@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<title></title>
+<style>
+* {
+font-size: 12px;
+}
+#redPacket {
+position: fixed;
+right: 12px;
+bottom: 60px;
+width: 75px;
+height: 85px;
+z-index: 999;
+cursor: pointer;
+background: url(https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/image/red-packet.webp);
+background-size: 100% 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+#redPacket .grab {
+  margin-top: 20px;
+  width: 35px;
+  height: 20px;
+  padding-top: 20px;
+  background: url(https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/image/grab.webp) no-repeat center;
+  background-size: 100% 100%;
+  -webkit-animation: scaleDraw .4s linear infinite;
+  animation: scaleDraw .4s linear infinite; /* Add this line */
+}
+
+#redPacket img {
+position: absolute;
+top: 0;
+right: -10px;
+width: 20px;
+-webkit-filter: grayscale(100%);
+-moz-filter: grayscale(100%);
+-ms-filter: grayscale(100%);
+-o-filter: grayscale(100%);
+filter: grayscale(100%);
+filter: gray;
+}
+
+@keyframes scaleDraw {
+25% {
+transform: scale(1.1);
+}
+
+50% {
+transform: scale(1.2);
+}
+
+75% {
+transform: scale(1.1);
+}
+
+100% {
+transform: scale(1);
+}
+}
+</style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/css/swiper.css">
+<script src="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/js/jquery-1.8.2.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/js/swiper.min.js"></script>
+<link href="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/css/app.6e1fbc7c99a1077ace5e40c6fb8dde5d.css" rel="stylesheet">
+</head>
+<body>
+<div id="app"></div>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/js/manifest.2ae2e69a05c33dfc65f8.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/js/vendor.3077b2724a0beda19d02.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/js/app.4e749a021a6927d2abf4.js"></script>
+<script>
+// 添加延迟加载和预加载
+window.onload = function() {
+  // 延迟加载 CSS
+  var link = document.createElement('link');
+  link.href = 'https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/css/swiper.css';
+  link.rel = 'stylesheet';
+  link.onload = function() {
+    document.head.removeChild(link);
+  };
+  document.head.appendChild(link);
+
+  // 预加载图片
+  var img = document.createElement('img');
+  img.src = 'https://cdn.jsdelivr.net/gh/newoubao/m@1.0/static/image/red-packet.webp';
+  document.body.appendChild(img);
+};
+
+// 动态添加 LCP 元素
+function addLCP() {
+  var div = document.createElement('div');
+  div.textContent = 'This is LCP element';
+  document.body.appendChild(div);
+}
+
+// 推迟提供关键的 JS/CSS
+window.onload = function() {
+  // 推迟提供关键的 JS
+  var script = document.createElement('script');
+  script.src
+</script>
